@@ -27,4 +27,8 @@ router.post('/products',function (req,res,next) {
    });
 });
 
+router.post('/orderStatus',function (req,res,next) {
+    res.json(req.body);
+});
+
 module.exports = router;
