@@ -1,6 +1,7 @@
 const {getProductsResponse} = require("../services/productServices");
 
 var express = require('express');
+const {getProvincesResponse} = require("../services/provincesServices");
 var router = express.Router();
 
 /* GET home page. */
