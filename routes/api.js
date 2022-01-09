@@ -15,6 +15,13 @@ router.post('/', async function(req, res, next) {
         const body = req.body;
         if(body.queryResult.parameters.productName){
             responseMessage = await getProductsResponse(body);
+            responseMessage = [...responseMessage,{
+                "text": {
+                    "text": [
+                        `¿desea buscar otros productos?`
+                    ]
+                }
+            }]
         }
         if(body.queryResult.parameters.provinceName){
             responseMessage = await getProvincesResponse(body);
