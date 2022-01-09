@@ -7,9 +7,9 @@ const toolsKit = {
         const orderedObjectList = objectList
             .sort((a, b) => a[field].toString().localeCompare(b[field].toString()));
         if (desc) {
-            return orderedObjectList;
+            return orderedObjectList.reverse();
         }
-        return orderedObjectList.reverse();
+        return orderedObjectList;
     },
 };
 

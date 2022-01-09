@@ -2,7 +2,7 @@ const axios = require('axios');
 
 const sendGraphQLRequest = async (data) => {
     const request = {
-        url: data.url,
+        url: 'https://graphql.treew.com/klsogshlksfnlskg',
         method: 'post',
         data: {
             query: data.query,
@@ -10,7 +10,7 @@ const sendGraphQLRequest = async (data) => {
         },
         headers: {
             'Content-Type': 'application/json',
-            Authorization: 'Bearer m4G1c_T0keN_foR_4piC4l1c3n7er',
+            Authorization: 'Bearer Sites84395gjidbfkge**3253t***dsv**',
         },
     };
 
