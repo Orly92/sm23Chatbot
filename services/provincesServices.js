@@ -7,11 +7,11 @@ const getProvincesResponse = (body)=>{
     const provincesCapital = ['La Habana','Habana'];
     const provincesOriente = ['Villa Clara','Cienfuegos','Sancti Spiritus','Ciego de Avila','Camaguey','Las Tunas',
     'Holguin','Granma','Santiago de Cuba','Guantanamo'];
-    if(provincesOccidente.some((item)=> item.localeCompare(province)))
+    if(provincesOccidente.some((item)=> item.toLowerCase() === province.toLowerCase()))
         response = 'De 5 a 7 días';
-    if(provincesCapital.some((item)=> item.localeCompare(province)))
+    if(provincesCapital.some((item)=> item.toLowerCase() === province.toLowerCase()))
         response = 'De 3 a 5 días';
-    if(provincesOriente.some((item)=> item.localeCompare(province)))
+    if(provincesOriente.some((item)=> item.toLowerCase() === province.toLowerCase()))
         response = 'De 10 a 15 días';
 
     return [{
