@@ -22,8 +22,7 @@ async function getProducts(productName) {
     return await sendGraphQLRequest(data);
 }
 
-const getProductsResponse = async (req)=>{
-    const body = req.body;
+const getProductsResponse = async (body)=>{
     const productName = body.queryResult.parameters.productName;
 
     if (productName == null)

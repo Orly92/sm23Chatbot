@@ -11,8 +11,12 @@ router.post('/', async function(req, res, next) {
     let responseMessage = [];
 
     try{
-        if(req.body.queryResult.parameters.productName){
-            responseMessage = await getProductsResponse(req);
+        const body = req.body;
+        if(body.queryResult.parameters.productName){
+            responseMessage = await getProductsResponse(body);
+        }
+        if(body.queryResult.parameters.provinceName){
+            responseMessage = await getProvincesResponse(body);
         }
     }catch (error) {
         responseMessage = [{
