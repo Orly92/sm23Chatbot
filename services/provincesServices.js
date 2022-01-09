@@ -17,7 +17,7 @@ const getProvincesResponse = (body)=>{
     return [{
         "text": {
             "text": [
-                response
+                `${response}, ¿desea buscar otra provincia?`
             ]
         }
     }]
